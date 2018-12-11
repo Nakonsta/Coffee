@@ -1,0 +1,268 @@
+$accent: #facb36;
+$dark: #101311;
+$text: #444645;
+$flax: #ffeeb7;
+$light: #e2e1e1;
+
+html, body {
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+	color: $text;
+	background-color: $dark;
+	min-width: 320px;
+	position: relative;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+.button {
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: none;
+	outline: none;
+	color: $accent;
+	line-height: 40px;
+	letter-spacing: 0.01em;
+	border: 2px solid $accent;
+	border-radius: 5px;
+	padding: 0 40px;
+	transition: all .5s ease;
+	&:hover {
+		background-color: $accent;
+		color: #fff;
+		outline: none;
+	}
+	&:focus {
+		background-color: darken($accent, 10%);
+		color: #fff;
+		outline: none;
+	}
+}
+
+.yellow {
+	color: $accent;
+}
+
+.header {
+	position: relative;
+	.logo-wrapper {
+		overflow: visible;
+	}
+	.logo {
+		background: url(../img/logo.png) no-repeat;
+		position: absolute;
+		height: 190px;
+		width: 190px;
+		border: 17px solid $dark;
+		border-radius: 50%;
+		top: 5px;
+		z-index: 1;
+	}
+	.navbar {
+		margin-top: 10px;
+		line-height: 60px;
+		.active {
+			color: $accent;
+		}
+		&-nav {
+			width: 100%;
+			justify-content: space-between;
+			.nav-item.active .nav-link {
+				color: $accent;
+			}
+			.nav-link {
+				white-space: nowrap;
+				color: $light;
+				font-weight: bold;
+			}
+		}
+	}
+	&__icons {
+		margin-top: 40px;
+		img:first-child {
+			margin-right: 15px;
+		}
+	}
+}
+
+
+
+.firstScreen {
+	&>.row, .col-12 {
+		padding: 0 !important;
+	}
+	&__content {
+		padding: 205px 10px 190px;
+		color: $light;
+		background-color: rgba($dark, 0.45);
+	}
+	&__text {
+		margin-right: 100px;
+		padding: 10px;
+		max-width: 560px;
+	}
+	.h1 {
+		font-family: 'Economica', sans-serif;
+		font-size: 70px;
+		letter-spacing: 0.01em;
+		line-height: 40px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	&__desc {
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+	&__slide {
+		background-size: cover;
+		max-height: 640px;
+		min-height: 640px;
+		outline: none;
+		&:hover, &:focus {
+			outline: none;
+		}
+	}
+	&__slide-1 {
+		background: url(../img/bg-sl-1.jpg) no-repeat 0% 70%;	
+		.firstScreen__text {
+			background: linear-gradient(transparent, rgba($dark, 0.3) 20%, rgba($dark, 0.3) 80%, transparent);
+			text-shadow: 2px 2px 0 $dark;
+		}
+		.firstScreen__content {
+			background-color: rgba($dark, 0.3);
+		}
+	}
+	&__slide-3 {
+		background: url(../img/bg-sl-6.jpg) no-repeat 100% 26%;
+	}
+	&__slide-4 {
+		background: url(../img/bg-sl-9.jpg) no-repeat 50% 25%;	
+	}
+	&__slide-5 {
+		background: url(../img/bg-sl-5.jpg) no-repeat 50%;		
+	}
+}
+
+/* Slick dots */
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 45px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+
+    z-index: 2;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    background-color: rgba($accent, 0.5);
+}
+.slick-dots li button:before {    
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    content: '';
+    text-align: center;
+    color: $light;
+    transition: background-color .5s ease;
+}
+.slick-dots li.slick-active button:before {
+    background-color: $accent;
+}
+
+
+@media all and (max-width:1200px){
+	.firstScreen {
+		.h1 {
+			font-size: 60px;
+		}
+	}
+}
+
+@media all and (max-width:992px){
+	.header {
+		.navbar {
+			display: inline-block;
+			&-nav {
+				text-align: left;
+			}
+		}
+		&__icons {
+			text-align: right;
+			margin-top: 32px;
+		}
+		.fa-shopping-cart, .fa-search {
+			display: inline-block;
+			font-size: 30px;
+			color: $accent;
+			height: 25px;
+			width: 25px;
+		}
+		.fa-search {
+			font-size: 26px;
+			color: #fff;
+			margin-left: 5px;
+		}
+	}
+}
+
+@media all and (max-width:768px){
+	.firstScreen {
+		&__text {
+			max-width: auto;
+		}
+	}
+}
