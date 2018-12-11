@@ -6,5 +6,11 @@ $(function() {
   		autoplaySpeed: 2000,
   		dots: true,
  		infinite: true
-    });
+	});
+	
+	$(".fa-search").on("click", function() {
+		$(".search").toggle( "slow", function() {
+			$(".search").css("display", "block");
+		});
+	});
 });

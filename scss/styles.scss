@@ -79,10 +79,47 @@ html, body {
 		}
 	}
 	&__icons {
-		margin-top: 40px;
-		img:first-child {
-			margin-right: 15px;
+		margin-top: 40px; 
+		.fa-shopping-cart, .fa-search {
+			display: inline-block;
+			font-size: 30px;
+			color: $accent;
+			height: 25px;
+			width: 25px;
+			transition: color .5s ease;
 		}
+		.fa-shopping-cart {
+			&:hover {
+				color: $light;
+			}
+		}
+		.fa-search {
+			font-size: 26px;
+			color: #fff;
+			margin-left: 15px;
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+	.search {
+		display: none;
+		&__input {			
+			position: absolute;
+			outline: none;
+			box-shadow: none;
+			border-radius: 15px;
+			background-color: $dark;
+			border: 1px solid $accent;
+			padding: 2px 10px;
+			font-size: 16px;
+			color: #fff;
+			top: 38px;
+			left: -260px;
+			z-index: 5;
+			height: 40px;
+			width: 240px;
+		}		
 	}
 }
 
@@ -145,10 +182,6 @@ html, body {
 }
 
 /* Slick dots */
-.slick-dotted.slick-slider {
-    margin-bottom: 30px;
-}
-
 .slick-dots {
     position: absolute;
     bottom: 45px;
@@ -229,6 +262,9 @@ html, body {
 		.h1 {
 			font-size: 60px;
 		}
+		&__slide-3 {
+			background-position: 68% 26%;	
+		}
 	}
 }
 
@@ -236,6 +272,7 @@ html, body {
 	.header {
 		.navbar {
 			display: inline-block;
+			margin-bottom: 15px;
 			&-nav {
 				text-align: left;
 			}
@@ -244,25 +281,59 @@ html, body {
 			text-align: right;
 			margin-top: 32px;
 		}
-		.fa-shopping-cart, .fa-search {
-			display: inline-block;
-			font-size: 30px;
-			color: $accent;
-			height: 25px;
-			width: 25px;
-		}
-		.fa-search {
-			font-size: 26px;
-			color: #fff;
-			margin-left: 5px;
+		.search {
+			&__input {			
+				top: 30px;
+				left: -120px;
+				width: 200px;
+			}		
 		}
 	}
 }
 
 @media all and (max-width:768px){
+	.header {
+		.logo {
+			background-size: cover;
+			width: 170px;
+			height: 170px;
+		}
+	}
 	.firstScreen {
 		&__text {
 			max-width: auto;
+		}
+		&__content {
+			padding: 160px 10px 190px;
+		}
+	}
+}
+
+@media all and (max-width:576px){
+	.header {
+		.logo {
+			background-size: cover;
+			width: 140px;
+			height: 140px;
+		}
+		.search {
+			&__input {			
+				top: 35px;
+				left: -200px;
+				width: 200px;
+			}		
+		}
+	}
+	.firstScreen {
+		.h1 {
+			font-size: 50px;
+		}
+		&__desc {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		&__text {
+			margin-right: 20px;
 		}
 	}
 }
