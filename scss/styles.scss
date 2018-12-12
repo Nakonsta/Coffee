@@ -1,4 +1,5 @@
 $accent: #facb36;
+$peat: #dd991d;
 $dark: #101311;
 $text: #444645;
 $flax: #ffeeb7;
@@ -42,6 +43,29 @@ html, body {
 
 .yellow {
 	color: $accent;
+}
+
+.peat {
+	color: $peat;
+}
+
+.h1 {
+	font-family: 'Economica', sans-serif;
+	font-size: 70px;
+	letter-spacing: 0.01em;
+	line-height: 40px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.h2 {
+	font-family: 'Economica', sans-serif;
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	//line-height: 18px;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 .header {
@@ -138,14 +162,6 @@ html, body {
 		margin-right: 100px;
 		padding: 10px;
 		max-width: 560px;
-	}
-	.h1 {
-		font-family: 'Economica', sans-serif;
-		font-size: 70px;
-		letter-spacing: 0.01em;
-		line-height: 40px;
-		text-transform: uppercase;
-		margin-bottom: 30px;
 	}
 	&__desc {
 		line-height: 36px;
@@ -256,6 +272,167 @@ html, body {
     background-color: $accent;
 }
 
+.services {
+	background-color: #f4f4f4;
+	color: #0a0a08;
+	padding: 95px 0;
+	text-align: center;
+	&__introduction {
+		max-width: 690px;
+		margin: 0 auto 55px;
+	}
+	&__product-img {
+		width: 255px;
+		height: 255px;
+		margin: 0 auto;
+		border: 7px solid #d1d1d1;
+		border-radius: 50%;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: -14px;
+			left: -14px;
+			width: 269px;
+			height: 269px;
+			border: 7px solid #e6e6e6;
+			border-radius: 50%;
+		}
+	}
+	&__product-title {
+		font-family: "Economica", sans-serif;
+		font-size: 34px;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 60px;
+		padding: 15px 0 10px;
+	}
+	&__product-img-1 {
+		background: url(../img/beans.png) no-repeat 50%;
+	}
+	&__product-img-2 {
+		background: url(../img/capuccino.png) no-repeat 50%;
+	}
+	&__product-img-3 {
+		background: url(../img/toast.png) no-repeat 50%;
+	}
+}
+
+.menu {
+	color: #d5c5b1;
+	&__text {
+		padding: 90px 0 80px;
+		width: 80%;
+	}
+	&__buttons {
+		width: 520px;
+		justify-content: space-around;
+		margin: 0 auto 30px;
+		.menu__button {
+			color: $accent;
+			border: 2px solid $accent;
+			border-radius: 5px;
+			padding: 7px 35px;
+			cursor: pointer;
+			transition: all .5s ease;
+			&:hover {
+				color: $dark;
+				background-color: $accent;
+			}
+		}
+		.menu__active {
+			color: $dark;
+			background-color: $accent;
+		}
+	}
+	&__card {
+		margin: 0 auto;
+		width: 65%;
+	}
+	&__items {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item {
+		border-top: 1px solid #675956;
+		padding: 20px 0 20px;
+		margin: 0 auto;
+		width: 95%;
+		&-row {
+			justify-content: space-between;
+			align-items: center;
+		}
+		&-title, &-price {
+			font-family: "Economica", sans-serif;
+			font-size: 34px;
+			letter-spacing: 0.01em;
+			line-height: 60px;
+			color: #ffeeb7;
+			transition: color .5s ease;
+			&:hover {
+				color: darken(#ffeeb7, 10%);
+				cursor: pointer;
+			}
+		}
+		&-desc {
+			font-size: 14px;
+			line-height: 18px;
+			max-width: 200px;
+		}
+		&-likes {
+			font-size: 14px;
+			line-height: 15px;
+			position: relative;
+			transition: color .5s ease;
+			&:hover {
+				color: darken(#ffeeb7, 10%);
+				cursor: pointer;
+				&::before {
+					transform: scale(1.1);
+				}
+			}
+			&::before {
+				content: '';
+				background: url(../img/like.png) no-repeat 50%;
+				display: block;
+				width: 14px;
+				height: 13px;
+				position: absolute;
+				top: 0;
+				left: -20px;
+			}
+		}
+
+	}
+	&__row-bottom {
+		border-bottom: 1px solid #675956;
+	}
+	&__all {
+		display: block;
+		text-align: right;
+		padding-top: 30px;
+		color: $accent;
+		text-transform: uppercase;
+		font-weight: 300;
+		text-decoration: none;
+		position: relative;
+		transition: color .3s ease-in;
+		&:hover, &:focus {
+			color: darken($accent, 10%);
+			text-decoration: none;
+		}
+		.fa-angle-right::before {
+			position: relative;
+			padding-left: 10px;
+			font-size: 30px;
+			top: 2px;
+		}
+	}
+	&__coffee {
+		background: url(../img/cup.png) no-repeat 50%;
+		background-size: cover;
+	}
+}
 
 @media all and (max-width:1200px){
 	.firstScreen {
@@ -264,6 +441,14 @@ html, body {
 		}
 		&__slide-3 {
 			background-position: 68% 26%;	
+		}
+	}
+	.menu {
+		&__text, &__card {
+			width: 90%;
+		}
+		&__coffee {
+			background-position: 5% 50%;
 		}
 	}
 }
@@ -289,6 +474,24 @@ html, body {
 			}		
 		}
 	}
+	.services {
+		&__product-img {
+			background-position: 50%;
+			background-size: cover;
+			width: 220px;
+			height: 220px;
+			&::before {
+				width: 234px;
+				height: 234px;
+			}
+		}
+	}
+	.menu {
+		&__text {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
 }
 
 @media all and (max-width:768px){
@@ -305,6 +508,17 @@ html, body {
 		}
 		&__content {
 			padding: 160px 10px 190px;
+		}
+	}
+	.services {
+		&__product {
+			margin: 0 auto 30px;
+			max-width: 350px;
+		}
+	}
+	.menu {
+		&__item {
+			max-width: 450px;
 		}
 	}
 }
@@ -334,6 +548,19 @@ html, body {
 		}
 		&__text {
 			margin-right: 20px;
+		}
+	}
+	.menu {
+		&__text {
+			padding: 70px 0 40px;
+		}
+		&__buttons {
+			flex-direction: column;
+			width: 100%;
+			.menu__button {
+				width: 70%;
+				margin: 0 auto 10px;
+			}
 		}
 	}
 }

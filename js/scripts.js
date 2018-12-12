@@ -9,8 +9,6 @@ $(function() {
 	});
 	
 	$(".fa-search").on("click", function() {
-		$(".search").toggle( "slow", function() {
-			$(".search").css("display", "block");
-		});
+		$(".search").toggle(1000);
 	});
 });
