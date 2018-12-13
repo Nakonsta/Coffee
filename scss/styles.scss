@@ -347,7 +347,10 @@ html, body {
 	}
 	&__card {
 		margin: 0 auto;
-		width: 65%;
+		width: 75%;
+		&-breakfasts, &-beans {
+			display: none;
+		}
 	}
 	&__items {
 		display: flex;
@@ -411,6 +414,7 @@ html, body {
 		display: block;
 		text-align: right;
 		padding-top: 30px;
+		padding-right: 150px;
 		color: $accent;
 		text-transform: uppercase;
 		font-weight: 300;
@@ -561,6 +565,10 @@ html, body {
 				width: 70%;
 				margin: 0 auto 10px;
 			}
+		}
+		&__items {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }
