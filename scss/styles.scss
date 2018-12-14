@@ -277,7 +277,7 @@ html, body {
 	color: #0a0a08;
 	padding: 95px 0;
 	text-align: center;
-	&__introduction {
+	&__about {
 		max-width: 690px;
 		margin: 0 auto 55px;
 	}
@@ -438,6 +438,51 @@ html, body {
 	}
 }
 
+.arabica {
+	background: url(../img/bg-7.jpg) 100%;
+	background-size: cover;
+	padding: 100px 0;
+	color: #d0c0ac;
+	&__about {
+		margin-bottom: 30px;
+		line-height: 36px;
+	}
+}
+
+.hits {
+	background-color: #fff;
+	text-align: center;
+	padding: 100px 0;
+	color: #444645;
+	&__img {
+		background-size: cover !important;
+		height: 412px;
+		position: relative;
+	}
+	&__title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		background-color: rgba($dark, 0.8);
+		font-family: "Economica", sans-serif;
+		font-size: 34px;
+		color: #c4c4c4;
+		height: 70px;
+		line-height: 70px;
+	}
+	&__beans-img-1 {
+		background: url(../img/product-1.jpg) no-repeat 50%;
+	}
+	&__beans-img-2 {
+		background: url(../img/product-2.jpg) no-repeat 50%;
+	}
+	&__beans-img-3 {
+		background: url(../img/product-3.jpg) no-repeat 50%;
+	}
+}
+
 @media all and (max-width:1200px){
 	.firstScreen {
 		.h1 {
@@ -494,6 +539,12 @@ html, body {
 		&__text {
 			margin-right: auto;
 			margin-left: auto;
+		}
+	}
+	.arabica {
+		background-position: 50%;
+		&__about {
+			color: #fff;
 		}
 	}
 }
@@ -570,5 +621,8 @@ html, body {
 			padding-left: 0;
 			padding-right: 0;
 		}
+	}
+	.arabica {
+		background-position: 65%;
 	}
 }
