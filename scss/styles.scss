@@ -49,6 +49,10 @@ html, body {
 	color: $peat;
 }
 
+.p-0 {
+	padding: 0 !important;
+}
+
 .h1 {
 	font-family: 'Economica', sans-serif;
 	font-size: 70px;
@@ -66,6 +70,18 @@ html, body {
 	//line-height: 18px;
 	margin-bottom: 20px;
 	text-align: center;
+}
+
+.h3 {
+	font-family: 'Economica', sans-serif;
+	font-size: 34px;
+	text-transform: uppercase;
+	color: $peat;
+}
+
+.introduction {
+	max-width: 690px;
+	margin: 0 auto 55px;
 }
 
 .header {
@@ -277,10 +293,6 @@ html, body {
 	color: #0a0a08;
 	padding: 95px 0;
 	text-align: center;
-	&__introduction {
-		max-width: 690px;
-		margin: 0 auto 55px;
-	}
 	&__product-img {
 		width: 255px;
 		height: 255px;
@@ -435,6 +447,29 @@ html, body {
 	&__coffee {
 		background: url(../img/cup.png) no-repeat 50%;
 		background-size: cover;
+	}
+}
+
+.ingridients {
+	background-color: #f4f4f4;
+	color: #444645;
+	padding: 100px 40px;
+	&__description {
+		padding: 100px 150px 100px 90px;
+		background-color: #fff;
+	}
+	&__img {
+		background-size: cover;
+		height: 100%;
+	}
+	&__img-1 {
+		background: url(../img/dessert.jpg) no-repeat 50%;
+	}
+	&__img-2 {
+		background: url(../img/beans-2.jpg) no-repeat 50%;
+	}
+	&__img-3 {
+		background: url(../img/breakfast.jpg) no-repeat 50%;		
 	}
 }
 
