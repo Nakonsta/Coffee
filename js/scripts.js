@@ -2,7 +2,7 @@ $(function() {
     $('.slick-top').slick({
     	prevArrow: '',
     	nextArrow: '',
-    	//autoplay: true,
+    	autoplay: true,
   		autoplaySpeed: 2000,
   		dots: true,
  		infinite: true
@@ -54,4 +54,5 @@ $(function() {
 		$(".menu__breakfast, .menu__drinks, .menu__beans").addClass("menu__active");
 		$(".menu__all").css("display", "none");
 	});
+	
 });

@@ -49,8 +49,8 @@ html, body {
 	color: $peat;
 }
 
-.p-0 {
-	padding: 0 !important;
+.dark {
+	color: $dark;
 }
 
 .h1 {
@@ -70,18 +70,6 @@ html, body {
 	//line-height: 18px;
 	margin-bottom: 20px;
 	text-align: center;
-}
-
-.h3 {
-	font-family: 'Economica', sans-serif;
-	font-size: 34px;
-	text-transform: uppercase;
-	color: $peat;
-}
-
-.introduction {
-	max-width: 690px;
-	margin: 0 auto 55px;
 }
 
 .header {
@@ -293,6 +281,10 @@ html, body {
 	color: #0a0a08;
 	padding: 95px 0;
 	text-align: center;
+	&__about {
+		max-width: 690px;
+		margin: 0 auto 55px;
+	}
 	&__product-img {
 		width: 255px;
 		height: 255px;
@@ -333,7 +325,7 @@ html, body {
 .menu {
 	color: #d5c5b1;
 	&__text {
-		padding: 90px 0 80px;
+		padding: 90px 0 70px;
 		width: 80%;
 	}
 	&__buttons {
@@ -445,7 +437,7 @@ html, body {
 		}
 	}
 	&__coffee {
-		background: url(../img/cup.png) no-repeat 50%;
+		background: $accent url(../img/cup.png) no-repeat 50%;
 		background-size: cover;
 	}
 }
@@ -454,6 +446,10 @@ html, body {
 	background-color: #f4f4f4;
 	color: #444645;
 	padding: 100px 40px;
+	&__antre {
+		padding-bottom: 50px;
+		text-align: center;
+	}
 	&__description {
 		padding: 100px 150px 100px 90px;
 		background-color: #fff;
@@ -469,7 +465,117 @@ html, body {
 		background: url(../img/beans-2.jpg) no-repeat 50%;
 	}
 	&__img-3 {
-		background: url(../img/breakfast.jpg) no-repeat 50%;		
+		background: url(../img/breakfast.jpg) no-repeat 50%; 		
+	}
+}
+
+.arabica {
+	background: url(../img/bg-7.jpg) 0%;
+	background-size: cover;
+	padding: 100px 0;
+	color: #d0c0ac;
+	&__about {
+		margin-bottom: 30px;
+		line-height: 36px;
+	}
+}
+
+.hits {
+	background-color: #fff;
+	text-align: center;
+	padding: 100px 0;
+	color: #444645;
+	&__beans {
+		margin-top: 20px;
+	}
+	&__img {
+		background-size: cover !important;
+		height: 412px;
+		position: relative;
+		margin-bottom: 85px;
+	}
+	&__title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		background-color: rgba($dark, 0.8);
+		font-family: "Economica", sans-serif;
+		font-size: 34px;
+		color: #c4c4c4;
+		height: 70px;
+		line-height: 70px;
+	}
+	&__price {
+		font-family: "Quicksand", sans-serif;
+		font-size: 32px;
+		line-height: 32px;
+		position: absolute;
+		top: 0;
+		transform: translateY(-50%);
+		left: 15px;
+		padding: 15px;
+		border-radius: 50%;
+		background-color: $accent;
+		color: $dark;
+	}
+	&__cart, &__order {
+		position: absolute;
+		bottom: 0;
+		width: 50%;
+		display: inline-block;
+		transform: translateY(99%);
+		height: 45px;
+		line-height: 45px;
+	}
+	&__cart {
+		background-color: #211a0b;
+		left: 0;
+		color: $light;
+	}
+	&__order {
+		background-color: $accent;
+		right: 0;		
+	}
+	&__beans-img-1 {
+		background: url(../img/product-1.jpg) no-repeat 50%;
+	}
+	&__beans-img-2 {
+		background: url(../img/product-2.jpg) no-repeat 50%;
+	}
+	&__beans-img-3 {
+		background: url(../img/product-3.jpg) no-repeat 50%;
+	}
+	&__beans-img-4 {
+		background: url(../img/product-4.jpg) no-repeat 50%;
+	}
+	&__beans-img-5 {
+		background: url(../img/product-5.jpg) no-repeat 50%;
+	}
+	&__beans-img-6 {
+		background: url(../img/product-6.jpg) no-repeat 50%;
+	}
+}
+
+.reviews {
+	background: url(../img/bg-4.png) no-repeat 50%;
+	background-size: cover;
+	padding: 100px 0;
+	color: $dark;
+	.h2 {
+		color: #fff;
+	}
+	&__antre {
+		&::before, &::after {
+			font-family: FontAwesome;
+			font-size: 40px;
+			color: #fff;
+		}
+		&::before {
+			content: '\f10e';
+			transform: rotate(180deg);
+		}
 	}
 }
 
@@ -488,6 +594,11 @@ html, body {
 		}
 		&__coffee {
 			background-position: 5% 50%;
+		}
+	}
+	.ingridients {
+		&__description {
+			padding: 70px 90px 70px 70px;
 		}
 	}
 }
@@ -531,6 +642,21 @@ html, body {
 			margin-left: auto;
 		}
 	}
+	.arabica {
+		background-position: 0%;
+		&__about {
+			color: #fff;
+		}
+	}
+	.ingridients {
+		&__description {
+			padding: 50px;
+			font-size: 16px;
+		}
+		.h3 {
+			font-size: 28px;
+		}
+	}
 }
 
 @media all and (max-width:768px){
@@ -558,6 +684,15 @@ html, body {
 	.menu {
 		&__item {
 			max-width: 450px;
+		}
+	}
+	.ingridients {
+		&__img {
+			height: 300px;
+		}
+		&__flex {
+			display: flex;
+			flex-direction: column-reverse;
 		}
 	}
 }
@@ -604,6 +739,23 @@ html, body {
 		&__items {
 			padding-left: 0;
 			padding-right: 0;
+		}
+	}
+
+	.ingridients {
+		.h2 {
+			font-size: 34px;
+		}
+		&__antre {
+			font-size: 16px;
+		}
+	}
+	.arabica {
+		background-position: 0%;
+	}
+	.hits {
+		&__price {
+			transform: translateY(-65%);
 		}
 	}
 }
