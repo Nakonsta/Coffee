@@ -3,7 +3,7 @@ $(function() {
     	prevArrow: '',
     	nextArrow: '',
     	autoplay: true,
-  		autoplaySpeed: 2000,
+  		autoplaySpeed: 1500,
   		dots: true,
  		infinite: true
 	});
