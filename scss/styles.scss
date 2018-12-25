@@ -563,20 +563,103 @@ html, body {
 	background-size: cover;
 	padding: 100px 0;
 	color: $dark;
+	line-height: 36px;
+	text-align: center;
 	.h2 {
 		color: #fff;
 	}
+	&__review {
+		outline: none;
+	}
 	&__antre {
+		padding-left: 30px;
+		position: relative;
 		&::before, &::after {
-			font-family: FontAwesome;
-			font-size: 40px;
+			font-size: 70px;
+			line-height: 30px;
 			color: #fff;
+			display: inline-block;
+			position: absolute;
 		}
 		&::before {
-			content: '\f10e';
+			content: '\2760';			
 			transform: rotate(180deg);
+			top: 25px;
+			left: 0;
+		}
+		&::after{
+			content: '\2760';
+			transform: scale(-1, 1) rotate(180deg);
+			filter: FlipH;
+			bottom: -28px;
+			right: 0;			
 		}
 	}
+	&__photo {
+		background: url(../img/client.png) no-repeat 50%;
+		width: 168px;
+		height: 168px;
+		margin: 35px auto 0;
+		border: 7px solid rgba(#f2f2f2, 0.5);
+		border-radius: 50%;
+		display: block;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			border: 7px solid rgba(#f2f2f2, 0.25);
+			border-radius: 50%;
+			height: 182px;
+			width: 182px;
+			position: absolute;
+			top: -14px;
+			left: -14px;
+		}
+		&-2 {
+			background: url(../img/client2.jpg) no-repeat 50%;
+		}
+		&-3 {
+			background: url(../img/client3.jpg) no-repeat 50%;
+		}
+		&-2, &-3 {
+			border-radius: 50%;
+			border: none;
+			width: 154px;
+			height: 154px;
+			&::after {
+				content: '';
+				border: 7px solid rgba(#f2f2f2, 0.5);
+				border-radius: 50%;
+				height: 168px;
+				width: 168px;
+				position: absolute;
+				top: -7px;
+				left: -7px;
+			}
+		}
+	}
+	&__name {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-top: 25px;
+	}
+	&__desc {
+		margin-bottom: 35px;
+	}
+	.slick-dots {
+		bottom: 0;
+	}
+	.slick-dots li button:before {
+		background-color: #fba800;
+		transition: all .5s ease;
+	}
+	.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+		filter: hue-rotate(-5deg);
+	}
+	.slick-dots li.slick-active button::before {
+		background-color: #fff;
+	}
+
 }
 
 @media all and (max-width:1200px){

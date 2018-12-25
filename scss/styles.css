@@ -640,22 +640,125 @@ html, body {
   background-size: cover;
   padding: 100px 0;
   color: #101311;
+  line-height: 36px;
+  text-align: center;
 }
 
 .reviews .h2 {
   color: #fff;
 }
 
+.reviews__review {
+  outline: none;
+}
+
+.reviews__antre {
+  padding-left: 30px;
+  position: relative;
+}
+
 .reviews__antre::before, .reviews__antre::after {
-  font-family: FontAwesome;
-  font-size: 40px;
+  font-size: 70px;
+  line-height: 30px;
   color: #fff;
+  display: inline-block;
+  position: absolute;
 }
 
 .reviews__antre::before {
-  content: '\f10e';
+  content: '\2760';
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  top: 25px;
+  left: 0;
+}
+
+.reviews__antre::after {
+  content: '\2760';
+  -webkit-transform: scale(-1, 1) rotate(180deg);
+          transform: scale(-1, 1) rotate(180deg);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  bottom: -28px;
+  right: 0;
+}
+
+.reviews__photo {
+  background: url(../img/client.png) no-repeat 50%;
+  width: 168px;
+  height: 168px;
+  margin: 35px auto 0;
+  border: 7px solid rgba(242, 242, 242, 0.5);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}
+
+.reviews__photo::before {
+  content: '';
+  display: block;
+  border: 7px solid rgba(242, 242, 242, 0.25);
+  border-radius: 50%;
+  height: 182px;
+  width: 182px;
+  position: absolute;
+  top: -14px;
+  left: -14px;
+}
+
+.reviews__photo-2 {
+  background: url(../img/client2.jpg) no-repeat 50%;
+}
+
+.reviews__photo-3 {
+  background: url(../img/client3.jpg) no-repeat 50%;
+}
+
+.reviews__photo-2, .reviews__photo-3 {
+  border-radius: 50%;
+  border: none;
+  width: 154px;
+  height: 154px;
+}
+
+.reviews__photo-2::after, .reviews__photo-3::after {
+  content: '';
+  border: 7px solid rgba(242, 242, 242, 0.5);
+  border-radius: 50%;
+  height: 168px;
+  width: 168px;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+}
+
+.reviews__name {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.reviews__desc {
+  margin-bottom: 35px;
+}
+
+.reviews .slick-dots {
+  bottom: 0;
+}
+
+.reviews .slick-dots li button:before {
+  background-color: #fba800;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.reviews .slick-dots li button:hover:before, .reviews .slick-dots li button:focus:before {
+  -webkit-filter: hue-rotate(-5deg);
+          filter: hue-rotate(-5deg);
+}
+
+.reviews .slick-dots li.slick-active button::before {
+  background-color: #fff;
 }
 
 @media all and (max-width: 1200px) {

@@ -54,5 +54,10 @@ $(function() {
 		$(".menu__breakfast, .menu__drinks, .menu__beans").addClass("menu__active");
 		$(".menu__all").css("display", "none");
 	});
+
+	$('.reviews__carousel').slick({
+		dots: true,
+		arrows: false
+	});
 	
 });
