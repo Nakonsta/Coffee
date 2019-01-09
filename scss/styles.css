@@ -5,7 +5,7 @@ html, body {
   font-size: 20px;
   line-height: 1.5;
   color: #444645;
-  background-color: #101311;
+  background-color: #fff;
   min-width: 320px;
   position: relative;
   scroll-behavior: smooth;
@@ -36,6 +36,25 @@ html, body {
 .button:focus {
   background-color: #f7bd06;
   color: #fff;
+  outline: none;
+}
+
+.button-yellow {
+  background-color: #facb36;
+  color: #101311;
+  border: 2px solid #facb36;
+}
+
+.button-yellow:hover {
+  background-color: #f7bd06;
+  color: #101311;
+  outline: none;
+}
+
+.button-yellow:focus {
+  background-color: #fbd14f;
+  border-color: #fbd14f;
+  color: #101311;
   outline: none;
 }
 
@@ -343,6 +362,7 @@ html, body {
 
 .menu {
   color: #d5c5b1;
+  background-color: #101311;
 }
 
 .menu__text {
@@ -654,19 +674,21 @@ html, body {
 
 .reviews__antre {
   padding-left: 30px;
+  padding-top: 10px;
   position: relative;
 }
 
 .reviews__antre::before, .reviews__antre::after {
-  font-size: 70px;
+  font-size: 85px;
   line-height: 30px;
   color: #fff;
   display: inline-block;
   position: absolute;
+  font-family: "Economica";
 }
 
 .reviews__antre::before {
-  content: '\2760';
+  content: ',,';
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   top: 25px;
@@ -674,7 +696,7 @@ html, body {
 }
 
 .reviews__antre::after {
-  content: '\2760';
+  content: ',,';
   -webkit-transform: scale(-1, 1) rotate(180deg);
           transform: scale(-1, 1) rotate(180deg);
   -webkit-filter: FlipH;
@@ -759,6 +781,78 @@ html, body {
 
 .reviews .slick-dots li.slick-active button::before {
   background-color: #fff;
+}
+
+.contacts {
+  color: #373737;
+}
+
+.contacts__form-item {
+  background-color: #fff;
+  border: 1px solid #bebebe;
+  color: #373737;
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.contacts__form-item::-webkit-input-placeholder {
+  color: #bebebe;
+}
+
+.contacts__form-item:-ms-input-placeholder {
+  color: #bebebe;
+}
+
+.contacts__form-item::-ms-input-placeholder {
+  color: #bebebe;
+}
+
+.contacts__form-item::placeholder {
+  color: #bebebe;
+}
+
+.contacts__form-item:invalid {
+  background-color: #e8e8e8;
+  border: none;
+}
+
+.contacts__form .selectize-input.full {
+  background-color: #fff;
+  border: 1px solid #bebebe;
+  color: #373737;
+  font-size: 20px;
+  outline: none;
+  padding-left: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 10px 15px;
+}
+
+.contacts__form .selectize-input.full::-webkit-input-placeholder {
+  color: #bebebe;
+}
+
+.contacts__form .selectize-input.full:-ms-input-placeholder {
+  color: #bebebe;
+}
+
+.contacts__form .selectize-input.full::-ms-input-placeholder {
+  color: #bebebe;
+}
+
+.contacts__form .selectize-input.full::placeholder {
+  color: #bebebe;
+}
+
+.contacts__form .selectize-input.full:invalid {
+  background-color: #e8e8e8;
+  border: none;
+}
+
+.contacts__submit {
+  width: 100%;
 }
 
 @media all and (max-width: 1200px) {
