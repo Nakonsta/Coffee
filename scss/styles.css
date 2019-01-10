@@ -90,6 +90,7 @@ html, body {
 
 .header {
   position: relative;
+  background-color: #101311;
 }
 
 .header .logo-wrapper {
@@ -894,8 +895,12 @@ html, body {
   text-decoration: none;
 }
 
-#map {
+.map #map {
   height: 500px;
+}
+
+.map__panorama {
+  width: 100%;
 }
 
 @media all and (max-width: 1200px) {

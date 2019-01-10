@@ -91,6 +91,7 @@ html, body {
 
 .header {
 	position: relative;
+	background-color: $dark;
 	.logo-wrapper {
 		overflow: visible;
 	}
@@ -754,9 +755,15 @@ html, body {
 	}
 }
 
-#map {
-	height: 500px;
+.map {
+	#map {
+		height: 500px;
+	}
+	&__panorama {
+		width: 100%;
+	}
 }
+
 
 @media all and (max-width:1200px){
 	.firstScreen {
