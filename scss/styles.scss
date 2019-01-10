@@ -683,20 +683,21 @@ html, body {
 }
 
 @mixin form-item() {
-	background-color: #fff;
-	border: 1px solid #bebebe;
+	background-color: #e8e8e8;
 	color: #373737;
+	border: none;
 	&::placeholder {
-		color: #bebebe;
+		color: #bfbfbf;
 	}
-	&:invalid {
-		background-color: #e8e8e8;
-		border: none;
-	}	
 }
 
 .contacts {
 	color: #373737;
+	margin-top: 95px;
+	margin-bottom: 100px;
+	.h2 {
+		margin-bottom: 40px;
+	}
 	&__form {
 		&-item {
 			@include form-item();
@@ -717,6 +718,44 @@ html, body {
 	&__submit {
 		width: 100%;
 	}
+	&__item {
+		position: relative; 
+		padding-left: 50px;
+		line-height: 40px;
+		&::before {
+			content: '';
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		&-1::before {
+			background: url(../img/contacts-1.png) no-repeat 50%;
+		}
+		&-2::before {
+			background: url(../img/contacts-2.png) no-repeat 50%;
+		}
+		&-3::before {
+			background: url(../img/contacts-3.png) no-repeat 50%;
+		}
+		&-4::before {
+			background: url(../img/contacts-4.png) no-repeat 50%;
+		}
+	}
+	&__link {
+		color: #373737;
+		text-decoration: none;
+		transition: all .5s ease-out;
+		&:hover, &:focus {
+			color: $accent;
+			text-decoration: none;
+		}
+	}
+}
+
+#map {
+	height: 500px;
 }
 
 @media all and (max-width:1200px){
@@ -797,6 +836,12 @@ html, body {
 			font-size: 28px;
 		}
 	}
+	.contacts {
+		&__list {
+			width: 65%;
+			margin: 0 auto;
+		}
+	}
 }
 
 @media all and (max-width:768px){
@@ -833,6 +878,11 @@ html, body {
 		&__flex {
 			display: flex;
 			flex-direction: column-reverse;
+		}
+	}
+	.contacts {
+		&__list {
+			width: 100%;
 		}
 	}
 }
@@ -896,6 +946,11 @@ html, body {
 	.hits {
 		&__price {
 			transform: translateY(-65%);
+		}
+	}
+	.contacts {
+		&__input-name {
+			margin-bottom: 20px;
 		}
 	}
 }
