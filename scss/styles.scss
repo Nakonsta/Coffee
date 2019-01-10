@@ -11,7 +11,7 @@ html, body {
 	font-size: 20px;
 	line-height: 1.5;
 	color: $text;
-	background-color: $dark;
+	background-color: #fff;
 	min-width: 320px;
 	position: relative;
 	scroll-behavior: smooth;
@@ -37,6 +37,23 @@ html, body {
 	&:focus {
 		background-color: darken($accent, 10%);
 		color: #fff;
+		outline: none;
+	}
+}
+
+.button-yellow {
+	background-color: $accent;
+	color: $dark;
+	border: 2px solid $accent;
+	&:hover {
+		background-color: darken($accent, 10%);
+		color: $dark;
+		outline: none;
+	}
+	&:focus {
+		background-color: lighten($accent, 5%);
+		border-color: lighten($accent, 5%);
+		color: $dark;
 		outline: none;
 	}
 }
@@ -324,6 +341,7 @@ html, body {
 
 .menu {
 	color: #d5c5b1;
+	background-color: $dark;
 	&__text {
 		padding: 90px 0 70px;
 		width: 80%;
@@ -573,22 +591,24 @@ html, body {
 	}
 	&__antre {
 		padding-left: 30px;
+		padding-top: 10px;
 		position: relative;
 		&::before, &::after {
-			font-size: 70px;
+			font-size: 85px;
 			line-height: 30px;
 			color: #fff;
 			display: inline-block;
 			position: absolute;
+			font-family: "Economica"; 
 		}
 		&::before {
-			content: '\2760';			
+			content: ',,';			
 			transform: rotate(180deg);
 			top: 25px;
 			left: 0;
 		}
 		&::after{
-			content: '\2760';
+			content: ',,';
 			transform: scale(-1, 1) rotate(180deg);
 			filter: FlipH;
 			bottom: -28px;
@@ -660,6 +680,43 @@ html, body {
 		background-color: #fff;
 	}
 
+}
+
+@mixin form-item() {
+	background-color: #fff;
+	border: 1px solid #bebebe;
+	color: #373737;
+	&::placeholder {
+		color: #bebebe;
+	}
+	&:invalid {
+		background-color: #e8e8e8;
+		border: none;
+	}	
+}
+
+.contacts {
+	color: #373737;
+	&__form {
+		&-item {
+			@include form-item();
+			width: 100%;
+			padding-left: 15px;
+			padding-top: 5px;
+			padding-bottom: 5px;		
+		}
+		.selectize-input.full {
+			@include form-item();
+			font-size: 20px;
+			outline: none;
+			padding-left: 0;
+			box-shadow: none;
+			padding: 10px 15px;		
+		}
+	}
+	&__submit {
+		width: 100%;
+	}
 }
 
 @media all and (max-width:1200px){
