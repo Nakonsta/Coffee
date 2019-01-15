@@ -388,7 +388,7 @@ html, body {
   transition: all .5s ease;
 }
 
-.menu__buttons .menu__button:hover {
+.menu__buttons .menu__button:hover, .menu__buttons .menu__button:focus {
   color: #101311;
   background-color: #facb36;
 }
@@ -903,6 +903,22 @@ html, body {
   width: 100%;
 }
 
+.map .menu__button-dark {
+  background-color: #101311;
+  border: 2px solid #101311;
+  color: #fff;
+}
+
+.map .menu__button-dark:hover, .map .menu__button-dark:focus {
+  color: #101311;
+  background-color: #facb36;
+  border-color: #facb36;
+}
+
+.map .map__panorama-2, .map .map__panorama-3 {
+  display: none;
+}
+
 @media all and (max-width: 1200px) {
   .firstScreen .h1 {
     font-size: 60px;
@@ -1061,6 +1077,9 @@ html, body {
   }
   .contacts__input-name {
     margin-bottom: 20px;
+  }
+  .map .menu__buttons .menu__button {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

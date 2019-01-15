@@ -66,6 +66,7 @@ $(function() {
     function init(){ 
 		var center1 = [64.143943, -21.939843];  
 		var center2 = [-4.581565, 55.432592]; 
+		var center3 = [-4.581565, 55.432592]; 
         var myMap = new ymaps.Map("map", {
             center: center1,
             zoom: 16
@@ -87,6 +88,28 @@ $(function() {
 			balloonCloseButton: false,
 			hideIconOnBalloonOpen: false
 		});
+		var placemark3 = new ymaps.Placemark(center3, {
+			balloonContent: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" />',
+			iconContent: "Caffeinate, Seychelles"}
+		, {
+			preset: "islands#yellowStretchyIcon",
+			balloonCloseButton: false,
+			hideIconOnBalloonOpen: false
+		});
 		myMap.geoObjects.add(placemark2);
-    }
+		myMap.geoObjects.add(placemark3);
+
+		$('.menu__button-dark').click(function(){
+			var country = '.' + $(this).attr('data-place');
+			$('.map__panorama').hide();
+			$(country).show();
+			var coordinates = $(this).attr('data-coordinates').split(', ');
+			coordinates = [parseFloat(coordinates[0]), parseFloat(coordinates[1])];
+			myMap.setCenter(coordinates);
+		});
+	}
+	
+	//Map buttons
+
+
 });

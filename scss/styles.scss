@@ -358,7 +358,7 @@ html, body {
 			padding: 7px 35px;
 			cursor: pointer;
 			transition: all .5s ease;
-			&:hover {
+			&:hover, &:focus {
 				color: $dark;
 				background-color: $accent;
 			}
@@ -762,6 +762,19 @@ html, body {
 	&__panorama {
 		width: 100%;
 	}
+	.menu__button-dark {
+		background-color: $dark;
+		border: 2px solid $dark;
+		color: #fff; 
+		&:hover, &:focus {
+			color: $dark;
+			background-color: $accent;
+			border-color: $accent;
+		}
+	}
+	.map__panorama-2, .map__panorama-3 {
+		display: none;
+	}
 }
 
 
@@ -958,6 +971,11 @@ html, body {
 	.contacts {
 		&__input-name {
 			margin-bottom: 20px;
+		}
+	}
+	.map {
+		.menu__buttons .menu__button {
+			width: 100%;
 		}
 	}
 }
