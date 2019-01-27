@@ -15,6 +15,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="https://nakonsta.github.io/portfolio-one/img/sandwich-2.jpg" />
 	<meta property="og:site_name" content="Coffee" />
+	<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 
 </head>
 <body>
@@ -168,9 +169,9 @@
 					<div class="col-lg-8 menu__text">
 						<h2 class="h2">Our menu</h2>
 						<div class="menu__buttons d-flex">
-							<div class="menu__button menu__beans">Coffee Beans</div>
-							<div class="menu__button menu__drinks menu__active">Drinks</div>
-							<div class="menu__button menu__breakfast">Breakfast</div>
+							<div class="menu__button menu__choose menu__beans" data-menu="menu__card-beans">Coffee Beans</div>
+							<div class="menu__button menu__choose menu__drinks menu__active" data-menu="menu__card-drinks">Drinks</div>
+							<div class="menu__button menu__choose menu__breakfast" data-menu="menu__card-breakfasts">Breakfast</div>
 						</div>
 						<div class="menu__card menu__card-beans">
 							<div class="row">
@@ -517,8 +518,8 @@ beatae optio eos. Assumen asperiores, saepe alias dignissimos.</p>
 										<div class="hits__title">Machiato Coffee
 											<div class="hits__price">$5</div>
 										</div>
-									<div class="hits__cart">Add to cart</div>
-									<div class="hits__order">Order</div>
+									<a href="#" class="hits__cart">Add to cart</a>
+									<a href="#" class="hits__order">Order</a>
 									</div>
 								</div>
 							</div>
@@ -643,25 +644,42 @@ beatae optio eos. Assumen asperiores, saepe alias dignissimos.</p>
 					<div class="row">
 						<div class="col-12">
 							<div class="menu__buttons d-flex">
-									<div class="menu__button menu__button-dark menu__iceland" data-place="map__panorama-1" data-coordinates="64.143943, -21.939843">Iceland</div>
-									<div class="menu__button menu__button-dark menu__drinks menu__seychelles" data-place="map__panorama-2" data-coordinates="-4.581565, 55.432592">Seychelles</div>
-									<div class="menu__button menu__button-dark menu__tonga" data-place="map__panorama-3" data-coordinates="24.143943, 21.939843">Tonga</div>
+									<div class="menu__button menu__button-dark map-button map-button-active menu__iceland" data-place="map__panorama-1" data-coordinates="64.143943, -21.939843">Iceland</div>
+									<div class="menu__button menu__button-dark map-button menu__madagaskar" data-place="map__panorama-2" data-coordinates="-18.909725, 47.524320">Madagaskar</div>
+									<div class="menu__button menu__button-dark map-button menu__bali" data-place="map__panorama-3" data-coordinates="-8.646716, 115.187018">Bali</div>
 								</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-6 p-0">								
+						<div class="col-sm-6 p-0 map__yandex">								
 							<iframe src="https://www.google.com/maps/embed?pb=!4v1547147750651!6m8!1m7!1sCAoSLEFGMVFpcE00a1M4TnNtWDRWS0EyTWtIbnNYNnNUci1lVlRKcV9hcFdDNmEw!2m2!1d66.36445619999999!2d-22.6230469!3f114.2377122362572!4f15.358621546024779!5f0.40634389951466554" width="760" height="500" frameborder="0" style="border:0" allowfullscreen class="map__panorama map__panorama-1"></iframe>
-							<iframe src="https://www.google.com/maps/embed?pb=!4v1547151700909!6m8!1m7!1sCAoSLEFGMVFpcE9CNXFtcVBhNTZ2S08yRTZVcWR6TmFGUGlLWENlZnFuaHA3LVRh!2m2!1d-4.592432!2d55.43220299999999!3f308.73573035564317!4f2.213911571261889!5f0.7820865974627469" width="760" height="500" frameborder="0" style="border:0" allowfullscreen class="map__panorama map__panorama-2"></iframe>
-							<iframe src="https://www.google.com/maps/embed?pb=!4v1547151305031!6m8!1m7!1sCAoSLEFGMVFpcE9rVXBKT1N1cHVCdWNnV2pGLUhzTTVjYmo5TVltajJpZUVjdFVN!2m2!1d65.4751205!2d-23.9704552!3f110.42247578154998!4f0.887131019069983!5f0.7820865974627469" width="760" height="500" frameborder="0" style="border:0" allowfullscreen class="map__panorama map__panorama-3"></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!4v1548450367101!6m8!1m7!1sCAoSLEFGMVFpcFBfb2hvOHJocTJNVGhFbmVQVkd1UndxRmIydm1iVmIxOUtfS3Z1!2m2!1d-13.52100519710119!2d47.97257918486878!3f170.48763108116088!4f2.3284544788361785!5f0.7820865974627469" width="760" height="500" frameborder="0" style="border:0" allowfullscreen class="map__panorama map__panorama-2"></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!4v1548451814937!6m8!1m7!1sCAoSLEFGMVFpcE04SFlsZ3BiNi1TRDJvcnpOVUtIOTVmZkhFNlNPWjZ3TFkzNjZY!2m2!1d-5.5770173!2d106.580312!3f114.36294184917293!4f8.277914729755821!5f0.7820865974627469" width="760" height="500" frameborder="0" style="border:0" allowfullscreen class="map__panorama map__panorama-3"></iframe>
 						</div>
-						<div class="col-sm-6 p-0">								
+						<div class="col-sm-6 p-0 map__yandex">								
 							<div id="map"></div>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="footer__designer">Designed By Anh Le 2019</p>
+					</div>
+					<div class="col-md-6 d-flex footer__social">
+						<a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+						<a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+						<a href="#" class="fa fa-pinterest-p" aria-hidden="true"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<p id="back-top">
+			<a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+		</p>
 		<script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>

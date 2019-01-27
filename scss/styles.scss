@@ -92,6 +92,12 @@ html, body {
 .header {
 	position: relative;
 	background-color: $dark;
+	&__scroll {
+		position: fixed;
+		z-index: 5;
+		width: 100%;
+    	box-shadow: 0 4px 0 0 $accent;
+	}
 	.logo-wrapper {
 		overflow: visible;
 	}
@@ -179,6 +185,7 @@ html, body {
 		padding: 205px 10px 190px;
 		color: $light;
 		background-color: rgba($dark, 0.45);
+		min-height: 640px;
 	}
 	&__text {
 		margin-right: 100px;
@@ -503,7 +510,16 @@ html, body {
 	background-color: #fff;
 	text-align: center;
 	padding: 100px 0;
-	color: #444645;
+	color: #444645;	
+	&__item {
+		box-shadow: 2px 2px 10px 0 rgba($dark, 0.3);
+		&:hover, .hits__item:focus {
+			.hits__img {
+				transform: scale(1.1);
+				//box-shadow: 2px 2px 10px 2px rgba($dark, 0.3);
+			}
+		}
+	}
 	&__beans {
 		margin-top: 20px;
 	}
@@ -512,6 +528,7 @@ html, body {
 		height: 412px;
 		position: relative;
 		margin-bottom: 85px;
+		transition: all .5s ease-in;
 	}
 	&__title {
 		position: absolute;
@@ -546,16 +563,31 @@ html, body {
 		display: inline-block;
 		transform: translateY(99%);
 		height: 45px;
-		line-height: 45px;
+		line-height: 40px;
+		color: #fff;
+		transition: all .5s ease-out;
+		cursor: pointer;
+		&:focus, &:hover {
+			text-decoration: none;
+			color: #fff;
+		}
 	}
 	&__cart {
 		background-color: #211a0b;
 		left: 0;
-		color: $light;
+		color: #fff;
+		border: 2px solid #211a0b;
+		&:focus, &:hover {
+			border: 2px solid $accent;
+		}
 	}
 	&__order {
 		background-color: $accent;
-		right: 0;		
+		right: 0;
+		border: 2px solid $accent;
+		&:focus, &:hover {
+			border: 2px solid #211a0b;
+		}		
 	}
 	&__beans-img-1 {
 		background: url(../img/product-1.jpg) no-repeat 50%;
@@ -775,7 +807,76 @@ html, body {
 	.map__panorama-2, .map__panorama-3 {
 		display: none;
 	}
+	&__yandex {
+		overflow-x: hidden;
+	}
+	&-button-active.map-button {
+		color: $dark;
+		background-color: $accent;
+		border-color: $accent;
+	}
 }
+
+.footer {
+	background-color: $accent;
+	margin-top: -10px;
+	&__designer {
+		padding: 35px 0 25px;
+		margin: 0;
+	}
+	.fa {
+		&::before {
+			color: #f7f7f7;
+			font-size: 20px;
+			line-height: 35px;
+			border-radius: 50%;
+			width: 35px;
+			height: 35px;
+			background: #e49b12;
+			margin-left: 20px;
+			display: block;
+			text-align: center;
+			transition: all .5s ease-in;
+		}
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+		&:hover::before, &:focus::before {
+			background: darken(#e49b12, 5%);
+			text-decoration: none;
+		}
+	}
+	&__social {
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+#back-top{
+	position:fixed;
+	bottom:30px;
+	right: 50px; 
+	display: none;
+}
+#back-top a{
+	width:64px;
+	height: 64px;
+	font-size: 32px;
+	line-height: 57px;
+	border-radius: 50%;
+	display:block;
+	text-align:center;
+	text-transform:uppercase;
+	text-decoration:none;
+	color:#fff;
+	background-color: $accent;
+	transition:1s;
+}
+
+#back-top a:hover{
+	background-color: $dark;
+}
+
 
 
 @media all and (max-width:1200px){
@@ -876,9 +977,6 @@ html, body {
 		&__text {
 			max-width: auto;
 		}
-		&__content {
-			padding: 160px 10px 190px;
-		}
 	}
 	.services {
 		&__product {
@@ -976,6 +1074,9 @@ html, body {
 	.map {
 		.menu__buttons .menu__button {
 			width: 100%;
+		}
+		&__yandex {
+			margin-top: -6px;
 		}
 	}
 }
